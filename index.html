@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Garante que a escala funcione corretamente em celulares e telas de alta densidade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galáxia 3D Interativa - Three.js</title>
+    
+    <!-- Conecta o arquivo de estilos externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- O elemento <canvas> é a "tela de pintura" onde o WebGL vai renderizar o mundo 3D -->
+    <canvas class="webgl"></canvas>
+
+    <!-- 
+      IMPORTMAP: Permite importar bibliotecas modernas (ES Modules) diretamente via URL (CDN)
+      usando nomes amigáveis como 'three' e 'lil-gui', igual faríamos num projeto com NPM.
+    -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+                "lil-gui": "https://unpkg.com/lil-gui@0.19.1/dist/lil-gui.esm.min.js"
+            }
+        }
+    </script>
+
+    <!-- 
+      Importa o nosso código JavaScript. 
+      O atributo type="module" é obrigatório para usar 'import' dentro do script.js.
+    -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
